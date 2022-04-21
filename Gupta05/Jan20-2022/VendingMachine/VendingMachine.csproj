@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\CocaCola.png" />
+    <None Remove="Images\Dew.png" />
+    <None Remove="Images\Gingerale.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VendLib\VendLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\CocaCola.png" />
+    <Resource Include="Images\Dew.png" />
+    <Resource Include="Images\Gingerale.png" />
+  </ItemGroup>
+
+</Project>

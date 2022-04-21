@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="VendingMachine.Views.CanRackView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ViewModels="clr-namespace:VendLib;assembly=VendLib" 
+             xmlns:local="clr-namespace:VendingMachine" 
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <!--<UserControl.DataContext>
+        <ViewModels:CanRackViewModel/>
+    </UserControl.DataContext>-->
+    <UserControl.Resources>
+        <local:FlavorNameToImageSourceConverter x:Key="myConvertor"/>
+     </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="{Binding CanDetailInfo}" TextWrapping="Wrap"
+                   Grid.Row="0"/>
+        <Button Content="Replenish CanRack" Command="{Binding CanRackReplenishCommand}" Grid.Row="1"/>
+        <ListBox x:Name="myListBox"  ItemsSource="{Binding Cans}" Grid.Row="2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding}"></TextBlock>
+                        <Image x:Name="myImage" Source="{Binding ., Converter= {StaticResource myConvertor}}" Height="300" Width="300"></Image>
+                        </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            
+        </ListBox>  
+    </Grid>
+</UserControl>

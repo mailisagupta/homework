@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VendingMachine", "VendingMachine\VendingMachine.csproj", "{EDE2B7B4-776F-448C-9F9D-565C5422D93E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinBoxContentDisplay", "CoinBoxContentDisplay\CoinBoxContentDisplay.csproj", "{64CF84D4-F389-4DD9-AEBE-6A47041963F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinLib", "..\..\..\Downloads\Assn 03 - CoinBox Starter\Assn 03 - CoinBox Starter\CoinLib\CoinLib.csproj", "{E4602785-D336-45E5-9739-261A27A22379}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanRackDisplay", "CanRackDisplay\CanRackDisplay.csproj", "{CB988DE2-71E0-44D9-BC95-067B95E5318C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CanRackLib", "..\..\..\Downloads\Assn 02\Assn 02\Assn 02 - CanRack ki4\CanRackWithTestsAsRequirements\CanRackLib\CanRackLib.csproj", "{A13B2DA0-0435-49B0-BA04-B6A8DE85C167}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VendLib", "VendLib\VendLib.csproj", "{52D2B96A-CB59-4B7B-9639-E2A3CFDF2EA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDE2B7B4-776F-448C-9F9D-565C5422D93E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDE2B7B4-776F-448C-9F9D-565C5422D93E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDE2B7B4-776F-448C-9F9D-565C5422D93E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDE2B7B4-776F-448C-9F9D-565C5422D93E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64CF84D4-F389-4DD9-AEBE-6A47041963F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64CF84D4-F389-4DD9-AEBE-6A47041963F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64CF84D4-F389-4DD9-AEBE-6A47041963F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64CF84D4-F389-4DD9-AEBE-6A47041963F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4602785-D336-45E5-9739-261A27A22379}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4602785-D336-45E5-9739-261A27A22379}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4602785-D336-45E5-9739-261A27A22379}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4602785-D336-45E5-9739-261A27A22379}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB988DE2-71E0-44D9-BC95-067B95E5318C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB988DE2-71E0-44D9-BC95-067B95E5318C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB988DE2-71E0-44D9-BC95-067B95E5318C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB988DE2-71E0-44D9-BC95-067B95E5318C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A13B2DA0-0435-49B0-BA04-B6A8DE85C167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A13B2DA0-0435-49B0-BA04-B6A8DE85C167}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A13B2DA0-0435-49B0-BA04-B6A8DE85C167}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A13B2DA0-0435-49B0-BA04-B6A8DE85C167}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52D2B96A-CB59-4B7B-9639-E2A3CFDF2EA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52D2B96A-CB59-4B7B-9639-E2A3CFDF2EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52D2B96A-CB59-4B7B-9639-E2A3CFDF2EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52D2B96A-CB59-4B7B-9639-E2A3CFDF2EA1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EFA0C656-B1AB-4E7F-8DE6-B522FEA1F050}
+	EndGlobalSection
+EndGlobal

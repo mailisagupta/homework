@@ -1,0 +1,1127 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/16/2020 3:55:45 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-66UPT56"
+  DTS:CreatorName="DESKTOP-66UPT56\silky"
+  DTS:DTSID="{645027A0-A698-4FBD-90BA-C31652DBDBBB}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.68"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package4"
+  DTS:PackageType="5"
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{BF9988EA-EF2E-43D8-BB39-0708C860D2B6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{70497BC6-F58A-44CA-9BB3-C5E217E8E60A}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\silky\Desktop\Practice\data.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D96A4900-5D3A-4B8E-8E37-CA78CD062151}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\silky\Desktop\Practice\data.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PolNum"
+              DTS:DTSID="{5E4D9C6B-46FC-430F-B9E1-14681DCE899D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="pk DirectCeded"
+              DTS:DTSID="{186A1379-A89C-4C8E-BE72-FFFF2985735D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="oth scenid"
+              DTS:DTSID="{BCA5E35B-DBCF-452E-A427-E5E5E553D79C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="VarName"
+              DTS:DTSID="{F4EA8828-814E-4738-9F57-0D2114976A46}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="F133PremInf"
+              DTS:DTSID="{D7BC6923-5A42-4C89-B466-ED457535BA74}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{5D633C67-C07E-4E54-818F-D356A7272E3E}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\silky\Desktop\Practice\LDTI_Transaction_Extract_20191231_v3.0.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="policynumber"
+              DTS:DTSID="{2E52735F-E00C-44F7-A4A7-EEE7C780DAE9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="product_marketing_name"
+              DTS:DTSID="{1D7990DF-4CF5-4432-ADEF-E2E485ADBA64}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="plan_identifier"
+              DTS:DTSID="{8EAA5DBC-B1F1-44F0-A8C4-A47EF4B0F45D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="policy_status_code"
+              DTS:DTSID="{37FA5F04-3E3A-4A9C-8D5E-9540B390D00C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="beginning_month_policy_status_code"
+              DTS:DTSID="{A412BD59-4F3B-49AF-B6E9-07CAB1FE98C7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="line_of_business_code"
+              DTS:DTSID="{3273B1EB-DFBC-440A-851E-D4E2B9C63ABA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="issue_effective_date"
+              DTS:DTSID="{C80E2176-DC40-4ABE-AA8F-4D9F8C4B882F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="termination_effective_date"
+              DTS:DTSID="{7C236DB5-0BAD-4914-B1F0-92BC4F006E7A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fund_account_transaction_code"
+              DTS:DTSID="{69322A52-FC6E-43FB-860B-39F80F023754}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="coverage_code"
+              DTS:DTSID="{E4D63D21-658F-4017-83D2-B9CA04F2BD78}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="non_excess_withdrawal_amount"
+              DTS:DTSID="{BCFA1835-1AB8-41EB-89C7-2BC681BCC946}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="prior_period_fund_value_amount"
+              DTS:DTSID="{F9B4C3F8-2A7F-4247-84CA-83ED467640C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="current_period_fund_value_amount"
+              DTS:DTSID="{9D39917D-6EC4-4766-8F43-99296B003DCA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="premium_month_amount"
+              DTS:DTSID="{3A32D52B-A008-431F-B4B6-6210B359EC2D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="policy_surrendered_amount"
+              DTS:DTSID="{869B9763-9FBD-49FB-94A9-ABD58BB41EF3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="gross_withdrawal_amount"
+              DTS:DTSID="{5B62AB09-FBDC-4988-97FD-7BF422530B05}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lifetime_income_rider_withdrawal_amount"
+              DTS:DTSID="{0DD44872-64B3-44F1-8742-0B4B25D91F6E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="long_term_care_rider_withdrawal_amount"
+              DTS:DTSID="{FB6AEB9F-6BAD-4152-B717-A6272C584864}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="required_minimum_distribution_withdrawal_amount"
+              DTS:DTSID="{7FFFA35A-00FE-414D-A388-219E590E56B8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="partial_withdrawal_amount"
+              DTS:DTSID="{E7BC6DFE-F19D-4100-80F9-FA95E1A5EF7E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="rider_fee_amount"
+              DTS:DTSID="{479F4469-8DA5-43F1-B070-229F711EDE11}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="gross_death_claim_amount"
+              DTS:DTSID="{29759D5C-6329-40A7-806E-397AA9CFDDC4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="annuitization_month_amount"
+              DTS:DTSID="{9BD0E85D-2600-488E-AFD7-01A9C3C18A9E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="transfer_month_amount"
+              DTS:DTSID="{A978A444-F839-40C4-B417-BE6D540F37C3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="surrender_charge_amount"
+              DTS:DTSID="{CAB16AA3-4F53-41BB-BAA0-8B1D6ED7B02A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="market_value_adjustment_incurred_amount"
+              DTS:DTSID="{14BC3A0E-ACDB-4807-85C9-EAB8509139D6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="miscellaneous_fee_amount"
+              DTS:DTSID="{A417C605-B0AA-4734-BFF4-9D828D2ED893}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="credit_month_amount"
+              DTS:DTSID="{0907AE59-E378-42B8-BD48-D9716A0E3AF5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="prior_derived_interest_rate"
+              DTS:DTSID="{E3823276-FA72-4694-9CCE-0291B94456CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="current_derived_interest_rate"
+              DTS:DTSID="{F382D676-AC0B-4F0C-979C-0810D40FABF1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="backdated_interest"
+              DTS:DTSID="{DDC2016B-BF20-483C-B999-F2E3C25EDEEB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="intrest_credit_valuation_amount"
+              DTS:DTSID="{687E4E4D-8DA7-4171-B97D-0C31D0742197}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="bonus_interest_credit_amount"
+              DTS:DTSID="{1535789C-FB32-40EC-BF0A-55EB2086D692}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tax_amount"
+              DTS:DTSID="{93EA819D-D867-46EE-8538-9C15A6C46212}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="calculated_interest_rate_amount"
+              DTS:DTSID="{D2AB20A3-8D2A-409E-946C-726D6982F10D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="calculated_ending_account_value"
+              DTS:DTSID="{8AE1A08E-7E2D-4321-AB9C-A24890888B59}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="interest_variance"
+              DTS:DTSID="{A91D71B6-9476-45B9-AA1F-3D17732376AB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="direct_cohort_code"
+              DTS:DTSID="{5C2AD00B-4108-42E2-945B-2615DE918BB9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="reinsured_cohort_code"
+              DTS:DTSID="{4166B8EF-7BA0-4C2A-8F61-4FA22BCAC1F2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="actuarial_deal_name"
+              DTS:DTSID="{349FAC22-16F0-4546-A202-4445DB036575}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="actuarial_block_text"
+              DTS:DTSID="{A4324259-31C3-440D-8CFC-34B114B72577}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ria_withdrawal_amount"
+              DTS:DTSID="{BD983276-13DB-432E-8EDB-D14E78350D8B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.GA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5144FFA8-3439-428E-9DBA-FBD26EBC3465}"
+      DTS:ObjectName="LocalHost.GA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=GA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.GA 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{57673D0D-EC12-46AD-AED1-7CF0960910B2}"
+      DTS:ObjectName="LocalHost.GA 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=GA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A0E6C988-253E-4C1A-928A-CD040FF48EC6}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLJobID">
+      <DTS:VariableValue
+        DTS:DataType="8">82020</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{AA334BE5-AE99-48A3-85A9-7D00C5CCE6EC}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="GDSKey">
+      <DTS:VariableValue
+        DTS:DataType="8">564789</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6E4E3D0A-157C-4812-845B-AD86956B5A93}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ValDate">
+      <DTS:VariableValue
+        DTS:DataType="8">08/2020</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\SC_TruncateAndInsertDataTable"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{61674DC9-6D42-436D-BAAD-32CBE3F73E03}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SC_TruncateAndInsertDataTable">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{E0EFE974-3992-415A-A708-C4D87891E368}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DFT_LoadData"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="FFS_Data"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].Columns[PolNum]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].ExternalColumns[PolNum]"
+                          length="50"
+                          lineageId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].Columns[PolNum]"
+                          name="PolNum"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].Columns[pk DirectCeded]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].ExternalColumns[pk DirectCeded]"
+                          length="50"
+                          lineageId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].Columns[pk DirectCeded]"
+                          name="pk DirectCeded"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].Columns[oth scenid]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].ExternalColumns[oth scenid]"
+                          length="50"
+                          lineageId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].Columns[oth scenid]"
+                          name="oth scenid"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].Columns[VarName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].ExternalColumns[VarName]"
+                          length="50"
+                          lineageId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].Columns[VarName]"
+                          name="VarName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].Columns[F133PremInf]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].ExternalColumns[F133PremInf]"
+                          lineageId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].Columns[F133PremInf]"
+                          name="F133PremInf"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].ExternalColumns[PolNum]"
+                          dataType="wstr"
+                          length="50"
+                          name="PolNum" />
+                        <externalMetadataColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].ExternalColumns[pk DirectCeded]"
+                          dataType="wstr"
+                          length="50"
+                          name="pk DirectCeded" />
+                        <externalMetadataColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].ExternalColumns[oth scenid]"
+                          dataType="wstr"
+                          length="50"
+                          name="oth scenid" />
+                        <externalMetadataColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].ExternalColumns[VarName]"
+                          dataType="wstr"
+                          length="50"
+                          name="VarName" />
+                        <externalMetadataColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].ExternalColumns[F133PremInf]"
+                          dataType="r8"
+                          name="F133PremInf" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData"
+                  componentClassID="Microsoft.SQLServerDestination"
+                  contactInfo="SQL Server Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;5"
+                  description="SQL Server Destination"
+                  name="SSD_InsertData"
+                  version="5">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.String"
+                      description="The name of the database object to copy data into."
+                      expressionType="Notify"
+                      name="BulkInsertTableName">[dbo].[data$]</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies that any constraints on the destination object are checked during the data copy operation. Corresponds to the bulk insert CHECK_CONSTRAINTS option."
+                      name="BulkInsertCheckConstraints">true</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the number of the first row to copy. Corresponds to the bulk insert FIRSTROW option."
+                      expressionType="Notify"
+                      name="BulkInsertFirstRow">-1</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies that any insert triggers defined on the destination object will execute during the data copy. Corresponds to the bulk insert FIRE_TRIGGERS option."
+                      name="BulkInsertFireTriggers">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Corresponds to the bulk insert KEEPIDENTITY option."
+                      name="BulkInsertKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null copied to the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="BulkInsertKeepNulls">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the number of the last row to copy. Corresponds to the bulk insert LASTROW option."
+                      expressionType="Notify"
+                      name="BulkInsertLastRow">-1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the maximum number of syntax errors and compilation errors that can occur before the data copy operation is canceled. Each row that cannot be copied is ignored and counted as one error. Corresponds to the bulk insert MAXERRORS option."
+                      name="BulkInsertMaxErrors">-1</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies how the data to be copied is sorted. Corresponds to the bulk insert ORDER option."
+                      expressionType="Notify"
+                      name="BulkInsertOrder"></property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies that a table-level lock is acquired for the duration of the data copy operation. Corresponds to the bulk insert TABLOCK option."
+                      name="BulkInsertTablock">true</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies in seconds the amount of time the SQL Destination adapter will wait before terminating if there is no data available for insertion.  A timeout value of 0 means the SQL Destination adapter will not time out."
+                      expressionType="Notify"
+                      name="Timeout">30</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion."
+                      name="MaxInsertCommitSize">0</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LocalHost.GA 1]"
+                      connectionManagerRefId="Package.ConnectionManagers[LocalHost.GA 1]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData.Inputs[SQL Server Destination Input]"
+                      hasSideEffects="true"
+                      name="SQL Server Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData.Inputs[SQL Server Destination Input].Columns[PolNum]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="PolNum"
+                          externalMetadataColumnId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData.Inputs[SQL Server Destination Input].ExternalColumns[PolNum]"
+                          lineageId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].Columns[PolNum]" />
+                        <inputColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData.Inputs[SQL Server Destination Input].Columns[VarName]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="VarName"
+                          externalMetadataColumnId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData.Inputs[SQL Server Destination Input].ExternalColumns[VarName]"
+                          lineageId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].Columns[VarName]" />
+                        <inputColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData.Inputs[SQL Server Destination Input].Columns[F133PremInf]"
+                          cachedDataType="r8"
+                          cachedName="F133PremInf"
+                          externalMetadataColumnId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData.Inputs[SQL Server Destination Input].ExternalColumns[F133PremInf]"
+                          lineageId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].Columns[F133PremInf]" />
+                        <inputColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData.Inputs[SQL Server Destination Input].Columns[pk DirectCeded]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="pk DirectCeded"
+                          externalMetadataColumnId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData.Inputs[SQL Server Destination Input].ExternalColumns[pk#DirectCeded]"
+                          lineageId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].Columns[pk DirectCeded]" />
+                        <inputColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData.Inputs[SQL Server Destination Input].Columns[oth scenid]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="oth scenid"
+                          externalMetadataColumnId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData.Inputs[SQL Server Destination Input].ExternalColumns[oth#scenid]"
+                          lineageId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output].Columns[oth scenid]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData.Inputs[SQL Server Destination Input].ExternalColumns[PolNum]"
+                          dataType="wstr"
+                          length="256"
+                          name="PolNum" />
+                        <externalMetadataColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData.Inputs[SQL Server Destination Input].ExternalColumns[pk#DirectCeded]"
+                          dataType="wstr"
+                          length="256"
+                          name="pk#DirectCeded" />
+                        <externalMetadataColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData.Inputs[SQL Server Destination Input].ExternalColumns[oth#scenid]"
+                          dataType="wstr"
+                          length="255"
+                          name="oth#scenid" />
+                        <externalMetadataColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData.Inputs[SQL Server Destination Input].ExternalColumns[VarName]"
+                          dataType="wstr"
+                          length="255"
+                          name="VarName" />
+                        <externalMetadataColumn
+                          refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData.Inputs[SQL Server Destination Input].ExternalColumns[F133PremInf]"
+                          dataType="r8"
+                          name="F133PremInf" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData.Paths[Flat File Source Output]"
+                  endId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData.Inputs[SQL Server Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_TruncateAndInsertDataTable\EST_TruncateData"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task to truncate data table"
+          DTS:DTSID="{19560A37-9422-4582-B064-B82F59A1F395}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_TruncateData"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5144FFA8-3439-428E-9DBA-FBD26EBC3465}"
+              SQLTask:SqlStatementSource="Truncate table [dbo].[data$]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\SC_TruncateAndInsertDataTable\Execute SQL Task"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{9FCA1229-09E0-4B3E-AD63-BFA0471A8CF5}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Execute SQL Task"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5144FFA8-3439-428E-9DBA-FBD26EBC3465}"
+              SQLTask:SqlStatementSource="EXEC sp_SeedF133PremIF ?,?,?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::ValDate"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::GDSKey"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::ETLJobID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_TruncateAndInsertDataTable.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{5287565D-8981-43B2-B63B-28C7DEBE4A97}"
+          DTS:From="Package\SC_TruncateAndInsertDataTable\EST_TruncateData"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\SC_TruncateAndInsertDataTable\DFT_LoadData" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\SC_TruncateAndInsertDataTable.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{3A42DB64-E14B-4253-9C66-EE3F25613661}"
+          DTS:From="Package\SC_TruncateAndInsertDataTable\DFT_LoadData"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\SC_TruncateAndInsertDataTable\Execute SQL Task" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="154,42"
+          Id="Package\SC_TruncateAndInsertDataTable\DFT_LoadData"
+          TopLeft="43,109" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\SC_TruncateAndInsertDataTable\EST_TruncateData"
+          TopLeft="27,14" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\SC_TruncateAndInsertDataTable\Execute SQL Task"
+          TopLeft="35,200" />
+        <EdgeLayout
+          Id="Package\SC_TruncateAndInsertDataTable.PrecedenceConstraints[Constraint]"
+          TopLeft="120.75,56">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53"
+              Start="0,0"
+              End="0,45.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\SC_TruncateAndInsertDataTable.PrecedenceConstraints[Constraint 1]"
+          TopLeft="120,151">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49"
+              Start="0,0"
+              End="0,41.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="374,352"
+          Size="374,395"
+          Id="Package\SC_TruncateAndInsertDataTable"
+          TopLeft="79,74" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\SC_TruncateAndInsertDataTable\DFT_LoadData">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="158,42"
+          Id="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData"
+          TopLeft="157,222" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\FFS_Data"
+          TopLeft="187,72" />
+        <EdgeLayout
+          Id="Package\SC_TruncateAndInsertDataTable\DFT_LoadData.Paths[Flat File Source Output]"
+          TopLeft="251.5,114">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-15.5,108"
+              Start="0,0"
+              End="-15.5,100.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,50"
+                    Point2="0,54"
+                    Point3="-4,54" />
+                  <mssgle:LineSegment
+                    End="-11.5,54" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-11.5,54"
+                    Point2="-15.5,54"
+                    Point3="-15.5,58" />
+                  <mssgle:LineSegment
+                    End="-15.5,100.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\SC_TruncateAndInsertDataTable\DFT_LoadData\SSD_InsertData">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

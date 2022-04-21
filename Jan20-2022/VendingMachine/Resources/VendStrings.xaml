@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=System.Runtime">
+    <system:String x:Key="localizedMessage" xml:space="preserve">1 Can CocaCola : 50 cent
+1 Can Mountain Dew : 40 cent
+1 Can Gingerale : 30 cent</system:String>
+
+    <system:String x:Key="localizedMessage2" >Vending Machine</system:String>
+
+</ResourceDictionary>

@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\CocaCola.png" />
+    <None Remove="Images\Dew.png" />
+    <None Remove="Images\Gingerale.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="VendLib">
+      <HintPath>..\VendLib\bin\Debug\net5.0\VendLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+ 
+
+
+
+  <ItemGroup>
+    <Resource Include="Images\CocaCola.png" />
+    <Resource Include="Images\Dew.png" />
+    <Resource Include="Images\Gingerale.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\CanRackView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\CoinBoxView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Views\CanRackView.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CoinBoxView.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

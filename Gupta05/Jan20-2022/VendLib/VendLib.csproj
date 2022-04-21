@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="CanRackLib">
+      <HintPath>..\CanRackLib\bin\Debug\net5.0\CanRackLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CoinLib">
+      <HintPath>..\CoinLib\bin\Debug\net5.0\CoinLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

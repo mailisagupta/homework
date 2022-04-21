@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\CocaCola.png" />
+    <None Remove="Images\Dew.png" />
+    <None Remove="Images\Gingerale.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CanRackLib">
+      <HintPath>..\..\..\..\Downloads\Assn 02\Assn 02\Assn 02 - CanRack ki4\CanRackWithTestsAsRequirements\CanRackLib\bin\Debug\net5.0\CanRackLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\CocaCola.png" />
+    <Resource Include="Images\Dew.png" />
+    <Resource Include="Images\Gingerale.png" />
+  </ItemGroup>
+
+</Project>

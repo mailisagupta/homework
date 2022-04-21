@@ -1,0 +1,2891 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/31/2020 6:55:31 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-66UPT56"
+  DTS:CreatorName="DESKTOP-66UPT56\silky"
+  DTS:DTSID="{C6D0E3A0-27F0-4857-A351-D4C379E73A9B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.68"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{A9D4EA1A-A620-4483-992A-F9E18F0A2E38}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{5D633C67-C07E-4E54-818F-D356A7272E3E}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\silky\Desktop\LDTI_Fund_Extract_20191231_v2.1.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="policy_number"
+              DTS:DTSID="{470ECF31-B9FC-45ED-9D58-84A9A8BAAE41}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="valuation_date"
+              DTS:DTSID="{21DA1903-4F1E-4C13-9C75-51186231D45D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fixed_rate_current"
+              DTS:DTSID="{6CF8D79F-E37B-41F9-A06B-127CD68C82A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="index_fund_type"
+              DTS:DTSID="{0D55FD6E-3B61-4AFA-9195-D7EAFA984227}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="index_fund_account_code"
+              DTS:DTSID="{2FD496BD-77A1-45CA-A35F-33E3CC9A361E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="index_fund_value"
+              DTS:DTSID="{2AF5C526-D6AD-4075-9323-ED16A10B7253}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="participation_rate"
+              DTS:DTSID="{0D495E1C-9B2D-4742-90E1-80CF4A6E0CB8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="spread_rate"
+              DTS:DTSID="{2F7855C6-A0E3-4003-AD32-848A7CED6EFC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="index_cap"
+              DTS:DTSID="{26264C3D-0F38-4109-A350-915BE557B74E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="next_index_date"
+              DTS:DTSID="{169ACC61-A203-4799-93F8-D845605A01B2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="last_index_number"
+              DTS:DTSID="{673E4EAF-1891-466E-AAE4-A9BD0434828D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="investment_plan_identifier"
+              DTS:DTSID="{4C1B338F-AD7E-497B-B1FC-3B9AA4DA0F96}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="index_calculation_method"
+              DTS:DTSID="{72048F77-1AEB-4483-8310-0E27F2FC6C7B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="hedge_prc_wst"
+              DTS:DTSID="{591AA2AA-4D05-441C-A758-36D5463A0FA9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="hedge_prc_wst_10_up"
+              DTS:DTSID="{F4FAE9BA-D57F-4B6C-B54C-E048019ED386}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="hedge_prc_wst_10_dn"
+              DTS:DTSID="{614013C1-43BB-4D73-88AC-64EAE24EA5E5}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[load_trans_data]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{2CAEEB6B-BA5E-4178-ABF4-91F610551EFA}"
+      DTS:ObjectName="load_trans_data">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\silky\Desktop\Practice\LDTI_Transaction_Extract_20191231_v3.0.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="policynumber"
+              DTS:DTSID="{F706CB1C-F4B4-4FC9-B666-80ADD3EFA86C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="product_marketing_name"
+              DTS:DTSID="{BC48AE43-C01A-4B4B-987C-404E4A56E5E7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="plan_identifier"
+              DTS:DTSID="{545FBADF-4B44-4C0F-A916-5D3FB03CA39D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="policy_status_code"
+              DTS:DTSID="{DE134BE0-8E4A-4741-8565-478BCC848995}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="beginning_month_policy_status_code"
+              DTS:DTSID="{84DAC8CB-C8AA-467A-96B6-73D255DA25A4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="line_of_business_code"
+              DTS:DTSID="{310E258C-1440-439D-8FE7-8359A9F5D552}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="issue_effective_date"
+              DTS:DTSID="{4492EFDA-9BC5-451F-B152-B3C4AC83FB2E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="termination_effective_date"
+              DTS:DTSID="{E0D27DDD-A05E-4330-B124-CCB39C002740}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fund_account_transaction_code"
+              DTS:DTSID="{E9F0CD49-944D-496A-BE00-46209BA5722C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="coverage_code"
+              DTS:DTSID="{1D6A1C8C-7CDB-4D43-B552-9078A2DE9849}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="non_excess_withdrawal_amount"
+              DTS:DTSID="{0AF7B0D9-37CC-4750-A359-E76DC99C1B53}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="prior_period_fund_value_amount"
+              DTS:DTSID="{BF1006CE-503E-45FE-B737-87FCB9983DAA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="current_period_fund_value_amount"
+              DTS:DTSID="{07CD6560-A421-4457-A944-6385302B9762}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="premium_month_amount"
+              DTS:DTSID="{5BAA9051-BA91-45B9-B9B8-658ED95C17AE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="policy_surrendered_amount"
+              DTS:DTSID="{82AB636E-FD22-40AA-8760-A2D93941A5C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="gross_withdrawal_amount"
+              DTS:DTSID="{C79AC729-A8E4-4AAE-B0A7-0A5AE853D9EA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lifetime_income_rider_withdrawal_amount"
+              DTS:DTSID="{8C8FD3E1-1EF4-441B-8910-329E18CABFAD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="long_term_care_rider_withdrawal_amount"
+              DTS:DTSID="{173A39A4-EA6B-4B38-B2E2-E52A13DE2F39}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="required_minimum_distribution_withdrawal_amount"
+              DTS:DTSID="{A42C0A25-90D6-46D0-B2E4-7A8212A60781}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="partial_withdrawal_amount"
+              DTS:DTSID="{CE6E5D8D-D155-4FBE-8BD0-687A13D2D0BE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="rider_fee_amount"
+              DTS:DTSID="{06340EB8-2616-4D4E-AB5A-EF000AE6AA27}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="gross_death_claim_amount"
+              DTS:DTSID="{EC840D58-3DDF-4CD4-8EAB-915F1F07A2B6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="annuitization_month_amount"
+              DTS:DTSID="{A465877D-2949-4091-B4D8-9DBE9DA4922E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="transfer_month_amount"
+              DTS:DTSID="{65D04087-98D4-459E-9791-ADFB4CBD89DD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="surrender_charge_amount"
+              DTS:DTSID="{767B4F19-522E-40EF-BF92-3950F3714274}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="market_value_adjustment_incurred_amount"
+              DTS:DTSID="{F31986A9-352F-436C-9BA9-4E5E2440A497}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="miscellaneous_fee_amount"
+              DTS:DTSID="{168040D2-A89D-4E37-9B2E-F36D1E7736E3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="credit_month_amount"
+              DTS:DTSID="{C2CE6CFD-348A-4055-A994-8634A171578D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="prior_derived_interest_rate"
+              DTS:DTSID="{096D02CE-E652-42AE-B9E3-092F94A075D9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="current_derived_interest_rate"
+              DTS:DTSID="{8FF6498B-1A24-4D94-BE63-5C32C3D31669}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="backdated_interest"
+              DTS:DTSID="{7D8576F2-A305-435F-87A8-509D06DB6C7C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="intrest_credit_valuation_amount"
+              DTS:DTSID="{B26A0A16-F721-4C90-855C-67AB0444A732}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="bonus_interest_credit_amount"
+              DTS:DTSID="{1DCD9DCF-893C-44A9-8AE6-BA6E01B124C2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tax_amount"
+              DTS:DTSID="{A068DFB2-F98C-4E68-AE3E-4E9B9E228CA8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="14"
+              DTS:TextQualified="True"
+              DTS:ObjectName="calculated_interest_rate_amount"
+              DTS:DTSID="{6AB1BF89-C4D0-406E-B608-0D89BA25E060}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="calculated_ending_account_value"
+              DTS:DTSID="{20A405E8-99F6-4F60-8E4D-5D9122143187}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="14"
+              DTS:TextQualified="True"
+              DTS:ObjectName="interest_variance"
+              DTS:DTSID="{BA702204-0717-4DEE-A144-84F604CD2E55}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="direct_cohort_code"
+              DTS:DTSID="{FFA2C06C-1E14-4CF0-8377-46EC34C6AB8D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="reinsured_cohort_code"
+              DTS:DTSID="{14458A48-1D44-4FF2-9CFE-4D2EC081F9C8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="actuarial_deal_name"
+              DTS:DTSID="{5F2C5E5A-374D-4F4B-9F2E-0AB49AD41D21}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="actuarial_block_text"
+              DTS:DTSID="{B02F9135-2AB2-4E71-98B7-FC80DCCE2C48}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ria_withdrawal_amount"
+              DTS:DTSID="{5212D1DA-6596-42DE-8FF7-4A552AEBEDDE}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.GA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5144FFA8-3439-428E-9DBA-FBD26EBC3465}"
+      DTS:ObjectName="LocalHost.GA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=GA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1C9E99C8-3F00-4E16-8A6E-6A90BBD21314}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ETLJobID">
+      <DTS:VariableValue
+        DTS:DataType="8">82020</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2421AD71-F729-458E-91CC-54C1A7169692}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="GDSKey">
+      <DTS:VariableValue
+        DTS:DataType="8">564789</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A00A84E3-A373-4740-BE5D-CA02C7ED88B8}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="PriorValDate">
+      <DTS:VariableValue
+        DTS:DataType="8">08</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2CBA0BD6-9A6E-4261-B5D9-02B57D2BE7CC}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Source2">
+      <DTS:VariableValue
+        DTS:DataType="8">27</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8A8E9548-FCC7-4DF0-B14C-8236340D754C}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ValDate">
+      <DTS:VariableValue
+        DTS:DataType="8">08/2020</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Sequence Container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{cd1b95b2-cb7d-4ca2-8602-44c8ce6362a9}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sequence Container">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Data Flow Task"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{2D83FFF3-2EB5-4F03-86D2-0D80E3F2DEB3}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Data Flow Task"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Sequence Container\Data Flow Task\Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[load_trans_data]"
+                      connectionManagerRefId="Package.ConnectionManagers[load_trans_data]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[policynumber]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[policynumber]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[policynumber]"
+                          name="policynumber"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[product_marketing_name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[product_marketing_name]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[product_marketing_name]"
+                          name="product_marketing_name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[plan_identifier]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[plan_identifier]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[plan_identifier]"
+                          name="plan_identifier"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[policy_status_code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[policy_status_code]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[policy_status_code]"
+                          name="policy_status_code"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[beginning_month_policy_status_code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[beginning_month_policy_status_code]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[beginning_month_policy_status_code]"
+                          name="beginning_month_policy_status_code"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[line_of_business_code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[line_of_business_code]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[line_of_business_code]"
+                          name="line_of_business_code"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[issue_effective_date]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[issue_effective_date]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[issue_effective_date]"
+                          name="issue_effective_date"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[termination_effective_date]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[termination_effective_date]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[termination_effective_date]"
+                          name="termination_effective_date"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[fund_account_transaction_code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fund_account_transaction_code]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[fund_account_transaction_code]"
+                          name="fund_account_transaction_code"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[coverage_code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[coverage_code]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[coverage_code]"
+                          name="coverage_code"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[non_excess_withdrawal_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[non_excess_withdrawal_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[non_excess_withdrawal_amount]"
+                          name="non_excess_withdrawal_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[prior_period_fund_value_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[prior_period_fund_value_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[prior_period_fund_value_amount]"
+                          name="prior_period_fund_value_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[current_period_fund_value_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[current_period_fund_value_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[current_period_fund_value_amount]"
+                          name="current_period_fund_value_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[premium_month_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[premium_month_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[premium_month_amount]"
+                          name="premium_month_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[policy_surrendered_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[policy_surrendered_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[policy_surrendered_amount]"
+                          name="policy_surrendered_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[gross_withdrawal_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[gross_withdrawal_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[gross_withdrawal_amount]"
+                          name="gross_withdrawal_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[lifetime_income_rider_withdrawal_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[lifetime_income_rider_withdrawal_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[lifetime_income_rider_withdrawal_amount]"
+                          name="lifetime_income_rider_withdrawal_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[long_term_care_rider_withdrawal_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[long_term_care_rider_withdrawal_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[long_term_care_rider_withdrawal_amount]"
+                          name="long_term_care_rider_withdrawal_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[required_minimum_distribution_withdrawal_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[required_minimum_distribution_withdrawal_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[required_minimum_distribution_withdrawal_amount]"
+                          name="required_minimum_distribution_withdrawal_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[partial_withdrawal_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[partial_withdrawal_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[partial_withdrawal_amount]"
+                          name="partial_withdrawal_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[rider_fee_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[rider_fee_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[rider_fee_amount]"
+                          name="rider_fee_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[gross_death_claim_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[gross_death_claim_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[gross_death_claim_amount]"
+                          name="gross_death_claim_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[annuitization_month_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[annuitization_month_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[annuitization_month_amount]"
+                          name="annuitization_month_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[transfer_month_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[transfer_month_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[transfer_month_amount]"
+                          name="transfer_month_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[surrender_charge_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[surrender_charge_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[surrender_charge_amount]"
+                          name="surrender_charge_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[market_value_adjustment_incurred_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[market_value_adjustment_incurred_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[market_value_adjustment_incurred_amount]"
+                          name="market_value_adjustment_incurred_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[miscellaneous_fee_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[miscellaneous_fee_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[miscellaneous_fee_amount]"
+                          name="miscellaneous_fee_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[credit_month_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[credit_month_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[credit_month_amount]"
+                          name="credit_month_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[prior_derived_interest_rate]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[prior_derived_interest_rate]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[prior_derived_interest_rate]"
+                          name="prior_derived_interest_rate"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[current_derived_interest_rate]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[current_derived_interest_rate]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[current_derived_interest_rate]"
+                          name="current_derived_interest_rate"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[backdated_interest]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[backdated_interest]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[backdated_interest]"
+                          name="backdated_interest"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[intrest_credit_valuation_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[intrest_credit_valuation_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[intrest_credit_valuation_amount]"
+                          name="intrest_credit_valuation_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[bonus_interest_credit_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[bonus_interest_credit_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[bonus_interest_credit_amount]"
+                          name="bonus_interest_credit_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[tax_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[tax_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[tax_amount]"
+                          name="tax_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[calculated_interest_rate_amount]"
+                          dataType="decimal"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[calculated_interest_rate_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[calculated_interest_rate_amount]"
+                          name="calculated_interest_rate_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[calculated_ending_account_value]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[calculated_ending_account_value]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[calculated_ending_account_value]"
+                          name="calculated_ending_account_value"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[interest_variance]"
+                          dataType="decimal"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[interest_variance]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[interest_variance]"
+                          name="interest_variance"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[direct_cohort_code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[direct_cohort_code]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[direct_cohort_code]"
+                          name="direct_cohort_code"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[reinsured_cohort_code]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[reinsured_cohort_code]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[reinsured_cohort_code]"
+                          name="reinsured_cohort_code"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[actuarial_deal_name]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[actuarial_deal_name]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[actuarial_deal_name]"
+                          name="actuarial_deal_name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[actuarial_block_text]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[actuarial_block_text]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[actuarial_block_text]"
+                          name="actuarial_block_text"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ria_withdrawal_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ria_withdrawal_amount]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ria_withdrawal_amount]"
+                          name="ria_withdrawal_amount"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[policynumber]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="policynumber" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[product_marketing_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="product_marketing_name" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[plan_identifier]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="plan_identifier" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[policy_status_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="policy_status_code" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[beginning_month_policy_status_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="beginning_month_policy_status_code" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[line_of_business_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="line_of_business_code" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[issue_effective_date]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="issue_effective_date" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[termination_effective_date]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="termination_effective_date" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fund_account_transaction_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="fund_account_transaction_code" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[coverage_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="coverage_code" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[non_excess_withdrawal_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="non_excess_withdrawal_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[prior_period_fund_value_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="prior_period_fund_value_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[current_period_fund_value_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="current_period_fund_value_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[premium_month_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="premium_month_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[policy_surrendered_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="policy_surrendered_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[gross_withdrawal_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="gross_withdrawal_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[lifetime_income_rider_withdrawal_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="lifetime_income_rider_withdrawal_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[long_term_care_rider_withdrawal_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="long_term_care_rider_withdrawal_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[required_minimum_distribution_withdrawal_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="required_minimum_distribution_withdrawal_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[partial_withdrawal_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="partial_withdrawal_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[rider_fee_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="rider_fee_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[gross_death_claim_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="gross_death_claim_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[annuitization_month_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="annuitization_month_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[transfer_month_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="transfer_month_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[surrender_charge_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="surrender_charge_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[market_value_adjustment_incurred_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="market_value_adjustment_incurred_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[miscellaneous_fee_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="miscellaneous_fee_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[credit_month_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="credit_month_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[prior_derived_interest_rate]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="prior_derived_interest_rate" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[current_derived_interest_rate]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="current_derived_interest_rate" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[backdated_interest]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="backdated_interest" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[intrest_credit_valuation_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="intrest_credit_valuation_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[bonus_interest_credit_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="bonus_interest_credit_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[tax_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="tax_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[calculated_interest_rate_amount]"
+                          dataType="decimal"
+                          name="calculated_interest_rate_amount" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[calculated_ending_account_value]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="calculated_ending_account_value" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[interest_variance]"
+                          dataType="decimal"
+                          name="interest_variance" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[direct_cohort_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="direct_cohort_code" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[reinsured_cohort_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="reinsured_cohort_code" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[actuarial_deal_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="actuarial_deal_name" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[actuarial_block_text]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="actuarial_block_text" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ria_withdrawal_amount]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="ria_withdrawal_amount" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\Data Flow Task\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[LDTITransData]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LocalHost.GA]"
+                      connectionManagerRefId="Package.ConnectionManagers[LocalHost.GA]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[product_marketing_name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="product_marketing_name"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[product_marketing_name]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[product_marketing_name]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[plan_identifier]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="plan_identifier"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[plan_identifier]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[plan_identifier]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[policy_status_code]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="policy_status_code"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[policy_status_code]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[policy_status_code]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[beginning_month_policy_status_code]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="beginning_month_policy_status_code"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[beginning_month_policy_status_code]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[beginning_month_policy_status_code]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[line_of_business_code]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="line_of_business_code"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[line_of_business_code]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[line_of_business_code]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[issue_effective_date]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="issue_effective_date"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[issue_effective_date]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[issue_effective_date]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[termination_effective_date]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="termination_effective_date"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[termination_effective_date]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[termination_effective_date]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[fund_account_transaction_code]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="fund_account_transaction_code"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[fund_account_transaction_code]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[fund_account_transaction_code]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[coverage_code]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="coverage_code"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[coverage_code]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[coverage_code]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[non_excess_withdrawal_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="non_excess_withdrawal_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Non_Excess_withdrawal_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[non_excess_withdrawal_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[prior_period_fund_value_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="prior_period_fund_value_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[prior_period_fund_value_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[prior_period_fund_value_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[current_period_fund_value_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="current_period_fund_value_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[current_period_fund_value_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[current_period_fund_value_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[premium_month_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="premium_month_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[premium_month_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[premium_month_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[policy_surrendered_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="policy_surrendered_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[policy_surrendered_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[policy_surrendered_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[gross_withdrawal_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="gross_withdrawal_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gross_withdrawal_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[gross_withdrawal_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[lifetime_income_rider_withdrawal_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="lifetime_income_rider_withdrawal_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lifetime_income_rider_withdrawal_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[lifetime_income_rider_withdrawal_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[long_term_care_rider_withdrawal_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="long_term_care_rider_withdrawal_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[long_term_care_rider_withdrawal_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[long_term_care_rider_withdrawal_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[required_minimum_distribution_withdrawal_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="required_minimum_distribution_withdrawal_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[required_minimum_distribution_withdrawal_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[required_minimum_distribution_withdrawal_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[partial_withdrawal_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="partial_withdrawal_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[partial_withdrawal_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[partial_withdrawal_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[rider_fee_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="rider_fee_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rider_fee_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[rider_fee_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[gross_death_claim_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="gross_death_claim_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gross_death_claim_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[gross_death_claim_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[annuitization_month_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="annuitization_month_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[annuitization_month_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[annuitization_month_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[transfer_month_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="transfer_month_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[transfer_month_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[transfer_month_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[surrender_charge_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="surrender_charge_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[surrender_charge_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[surrender_charge_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[market_value_adjustment_incurred_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="market_value_adjustment_incurred_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[market_value_adjustment_incurred_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[market_value_adjustment_incurred_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[miscellaneous_fee_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="miscellaneous_fee_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[miscellaneous_fee_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[miscellaneous_fee_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[credit_month_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="credit_month_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[credit_month_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[credit_month_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[prior_derived_interest_rate]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="prior_derived_interest_rate"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[prior_derived_interest_rate]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[prior_derived_interest_rate]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[current_derived_interest_rate]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="current_derived_interest_rate"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[current_derived_interest_rate]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[current_derived_interest_rate]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[backdated_interest]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="backdated_interest"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[backdated_interest]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[backdated_interest]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[intrest_credit_valuation_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="intrest_credit_valuation_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[intrest_credit_valuation_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[intrest_credit_valuation_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[bonus_interest_credit_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="bonus_interest_credit_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[bonus_interest_credit_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[bonus_interest_credit_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[tax_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="tax_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tax_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[tax_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[calculated_interest_rate_amount]"
+                          cachedDataType="decimal"
+                          cachedName="calculated_interest_rate_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[calculated_interest_rate_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[calculated_interest_rate_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[calculated_ending_account_value]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="calculated_ending_account_value"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[calculated_ending_account_value]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[calculated_ending_account_value]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[interest_variance]"
+                          cachedDataType="decimal"
+                          cachedName="interest_variance"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[interest_variance]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[interest_variance]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[direct_cohort_code]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="direct_cohort_code"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[direct_cohort_code]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[direct_cohort_code]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[reinsured_cohort_code]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="reinsured_cohort_code"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[reinsured_cohort_code]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[reinsured_cohort_code]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[actuarial_deal_name]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="actuarial_deal_name"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[actuarial_deal_name]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[actuarial_deal_name]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[actuarial_block_text]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="actuarial_block_text"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[actuarial_block_text]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[actuarial_block_text]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ria_withdrawal_amount]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="ria_withdrawal_amount"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ria_withdrawal_amount]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ria_withdrawal_amount]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[policynumber]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="policynumber"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[policy_number]"
+                          lineageId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[policynumber]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[policy_number]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="policy_number" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[product_marketing_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="product_marketing_name" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[plan_identifier]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="plan_identifier" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[policy_status_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="policy_status_code" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[beginning_month_policy_status_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="beginning_month_policy_status_code" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[line_of_business_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="line_of_business_code" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[issue_effective_date]"
+                          dataType="dbDate"
+                          name="issue_effective_date" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[termination_effective_date]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="termination_effective_date" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[fund_account_transaction_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="fund_account_transaction_code" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[coverage_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="coverage_code" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Non_Excess_withdrawal_amount]"
+                          dataType="numeric"
+                          name="Non_Excess_withdrawal_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[prior_period_fund_value_amount]"
+                          dataType="numeric"
+                          name="prior_period_fund_value_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[current_period_fund_value_amount]"
+                          dataType="numeric"
+                          name="current_period_fund_value_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[premium_month_amount]"
+                          dataType="numeric"
+                          name="premium_month_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[policy_surrendered_amount]"
+                          dataType="numeric"
+                          name="policy_surrendered_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gross_withdrawal_amount]"
+                          dataType="numeric"
+                          name="gross_withdrawal_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lifetime_income_rider_withdrawal_amount]"
+                          dataType="numeric"
+                          name="lifetime_income_rider_withdrawal_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[long_term_care_rider_withdrawal_amount]"
+                          dataType="numeric"
+                          name="long_term_care_rider_withdrawal_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[required_minimum_distribution_withdrawal_amount]"
+                          dataType="numeric"
+                          name="required_minimum_distribution_withdrawal_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[partial_withdrawal_amount]"
+                          dataType="numeric"
+                          name="partial_withdrawal_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[rider_fee_amount]"
+                          dataType="numeric"
+                          name="rider_fee_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gross_death_claim_amount]"
+                          dataType="numeric"
+                          name="gross_death_claim_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[annuitization_month_amount]"
+                          dataType="numeric"
+                          name="annuitization_month_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[transfer_month_amount]"
+                          dataType="numeric"
+                          name="transfer_month_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[surrender_charge_amount]"
+                          dataType="numeric"
+                          name="surrender_charge_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[market_value_adjustment_incurred_amount]"
+                          dataType="numeric"
+                          name="market_value_adjustment_incurred_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[miscellaneous_fee_amount]"
+                          dataType="numeric"
+                          name="miscellaneous_fee_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[credit_month_amount]"
+                          dataType="numeric"
+                          name="credit_month_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[prior_derived_interest_rate]"
+                          dataType="numeric"
+                          name="prior_derived_interest_rate"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[current_derived_interest_rate]"
+                          dataType="numeric"
+                          name="current_derived_interest_rate"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[backdated_interest]"
+                          dataType="numeric"
+                          name="backdated_interest"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[intrest_credit_valuation_amount]"
+                          dataType="numeric"
+                          name="intrest_credit_valuation_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[bonus_interest_credit_amount]"
+                          dataType="numeric"
+                          name="bonus_interest_credit_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tax_amount]"
+                          dataType="numeric"
+                          name="tax_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[calculated_interest_rate_amount]"
+                          dataType="numeric"
+                          name="calculated_interest_rate_amount"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[calculated_ending_account_value]"
+                          dataType="numeric"
+                          name="calculated_ending_account_value"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[interest_variance]"
+                          dataType="numeric"
+                          name="interest_variance"
+                          precision="30"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[direct_cohort_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="direct_cohort_code" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[reinsured_cohort_code]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="reinsured_cohort_code" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[actuarial_deal_name]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="actuarial_deal_name" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[actuarial_block_text]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="actuarial_block_text" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ria_withdrawal_amount]"
+                          dataType="numeric"
+                          name="ria_withdrawal_amount"
+                          precision="30"
+                          scale="10" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Sequence Container\Data Flow Task.Paths[Flat File Source Output]"
+                  endId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Sequence Container\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\EST_sp_ProduceCFMFFiles"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task to run sp_ProduceCFMFFiles"
+          DTS:DTSID="{dabcbcd6-a31f-41a9-bd77-0fc689d24e1c}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_sp_ProduceCFMFFiles"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5144FFA8-3439-428E-9DBA-FBD26EBC3465}"
+              SQLTask:SqlStatementSource="exec sp_ProduceCFMFFiles ?,?,?,?,?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::ValDate"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::PriorValDate"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="2"
+                SQLTask:DtsVariableName="User::GDSKey"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="3"
+                SQLTask:DtsVariableName="User::Source2"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="129"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="4"
+                SQLTask:DtsVariableName="User::ETLJobID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\EST_TruncateF133PremFFile"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="EST_TruncateF133PremFFile"
+          DTS:DTSID="{07a13fbe-86fe-4866-8622-e17cc695c0a4}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_TruncateF133PremFFile"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5144FFA8-3439-428E-9DBA-FBD26EBC3465}"
+              SQLTask:SqlStatementSource="truncate table [dbo].[F133PremFFile]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\EST_TruncateLDTITransData"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="EST_TruncateLDTITransData"
+          DTS:DTSID="{4cc68e94-c8ad-42fb-be2c-a942847d74db}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="EST_TruncateLDTITransData"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{5144FFA8-3439-428E-9DBA-FBD26EBC3465}"
+              SQLTask:SqlStatementSource="truncate table [dbo].[LDTITransData]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Sequence Container.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{7d8903c9-ce76-4506-a7eb-f9646ac07848}"
+          DTS:From="Package\Sequence Container\EST_TruncateLDTITransData"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Sequence Container\EST_TruncateF133PremFFile" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Sequence Container.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{79C2ACC6-5F8B-432D-8CF3-C325236ED216}"
+          DTS:From="Package\Sequence Container\EST_TruncateF133PremFFile"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Sequence Container\Data Flow Task" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Sequence Container.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{5B021780-6C53-4F70-B508-0BBCC397830C}"
+          DTS:From="Package\Sequence Container\Data Flow Task"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\Sequence Container\EST_sp_ProduceCFMFFiles" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="219,42"
+          Id="Package\Sequence Container\EST_sp_ProduceCFMFFiles"
+          TopLeft="161,324" />
+        <NodeLayout
+          Size="234,42"
+          Id="Package\Sequence Container\EST_TruncateF133PremFFile"
+          TopLeft="138,125" />
+        <NodeLayout
+          Size="225,42"
+          Id="Package\Sequence Container\EST_TruncateLDTITransData"
+          TopLeft="135,44" />
+        <EdgeLayout
+          Id="Package\Sequence Container.PrecedenceConstraints[Constraint]"
+          TopLeft="251.25,86">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Sequence Container\Data Flow Task"
+          TopLeft="247,227" />
+        <EdgeLayout
+          Id="Package\Sequence Container.PrecedenceConstraints[Constraint 1]"
+          TopLeft="255,167">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69.5,60"
+              Start="0,0"
+              End="69.5,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="65.5,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="65.5,30"
+                    Point2="69.5,30"
+                    Point3="69.5,34" />
+                  <mssgle:LineSegment
+                    End="69.5,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Sequence Container.PrecedenceConstraints[Constraint 2]"
+          TopLeft="324.5,269">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-54,55"
+              Start="0,0"
+              End="-54,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.5"
+                    Point2="0,27.5"
+                    Point3="-4,27.5" />
+                  <mssgle:LineSegment
+                    End="-50,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-50,27.5"
+                    Point2="-54,27.5"
+                    Point3="-54,31.5" />
+                  <mssgle:LineSegment
+                    End="-54,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="546,505"
+          Size="546,548"
+          Id="Package\Sequence Container"
+          TopLeft="60,60" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Sequence Container\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Sequence Container\Data Flow Task\Flat File Source"
+          TopLeft="314,88" />
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Sequence Container\Data Flow Task\OLE DB Destination"
+          TopLeft="373,230" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="392,130">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69.5,100"
+              Start="0,0"
+              End="69.5,92.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46"
+                    Point2="0,50"
+                    Point3="4,50" />
+                  <mssgle:LineSegment
+                    End="65.5,50" />
+                  <mssgle:CubicBezierSegment
+                    Point1="65.5,50"
+                    Point2="69.5,50"
+                    Point3="69.5,54" />
+                  <mssgle:LineSegment
+                    End="69.5,92.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
