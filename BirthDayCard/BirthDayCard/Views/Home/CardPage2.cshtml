@@ -1,0 +1,67 @@
+﻿@model BirthDayCard.Models.GetCardFields
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        #forBorder {
+            border: 1px solid black;
+            padding: 8px;
+            margin: 8px;
+            width: 700px;
+        }
+        
+        h4 {
+            background-color: black;
+            color: white;
+            border: 1px solid gray;
+            padding: 8px;
+        }
+        h5 {
+            padding: 8px;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width" />
+    <title>CardPage2</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="forBorder">
+        <h4>Birthday Card Generator</h4>
+        <hr />
+        <h5>Birthday Card Sent</h5>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.From)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.From)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.To)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.To)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Message)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Message)
+            </dd>
+        </dl>
+
+        <div>
+
+            <a asp-action="Index">Exit</a>
+        </div>
+    </div>
+</body>
+</html>
