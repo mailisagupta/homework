@@ -1,7 +1,10 @@
+using SortableCollection.Models;
+using SortableCollection;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<IContactRepository,ContactRepository>();
 
 var app = builder.Build();
 
