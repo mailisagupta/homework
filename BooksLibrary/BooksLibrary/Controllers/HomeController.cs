@@ -1,0 +1,44 @@
+﻿using BooksLibrary.Models;
+using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
+
+namespace BooksLibrary.Controllers
+{
+    public class HomeController : Controller
+    {
+        private readonly ILogger<HomeController> _logger;
+
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
+
+        public IActionResult Index(string user)
+        {
+            if (user == "admin") { return View("Admin");  }
+            if (user == "guest") { return View("Guest"); }
+            if (user == "ruser") { return View("RegisteredUser"); }
+            return View();
+        }
+
+        public IActionResult Browse()
+        {
+            return View();
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult BrowseBooks(string value) 
+        { 
+            return View("Browse"); }
+
+       [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    }
+}

@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+<head>
+ <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" ></script> 
+ <script type="text/javascript" src="/js/header.js" ></script> 
+ </head>
+  <div id="x"></div>
+ @* <script>
+
+    var img = document.createElement("img");
+    img.src = "/Images/books.jpg";
+    img.setAttribute("style", "margin-top: 10px;width: 1600;height: 100;margin-bottom: 10px");
+
+    var div = document.getElementById("x");
+    div.appendChild(img);
+    div.setAttribute("style", "text-align:center");
+
+    </script>*@
+
+@*    <img src="/Images/books.jpg"  width="1600" height="100" style="border:5px solid black">*@
+
+  <div class="dropdown">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+      Here As
+    </button>
+    <ul class="dropdown-menu">
+      <li>@Html.ActionLink("Library Admin", "Index", "Home", new { user = "admin" })</li>
+      
+      <li>@Html.ActionLink("Registered User", "Index", "Home" , new { user = "ruser" } )</li>
+    </ul>
+  </div>
+
+ 
+<div class="text-center">
+    <h1 class="display-4">Welcome to the World's largest Book Library</h1>
+    @Html.ActionLink("Click here to Browse the Books", "Browse", "Home")
+      
+</div>
