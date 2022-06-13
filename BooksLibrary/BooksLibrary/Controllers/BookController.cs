@@ -3,31 +3,68 @@ using BooksLibrary.Data;
 using BooksLibrary.Models;
 using Microsoft.Data.SqlClient;
 using System.Data;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BooksLibrary.Controllers
-{
+{ [Authorize (AuthenticationSchemes = "MyCookie")]
     public class BookController : Controller
     {
         private readonly IConfiguration _configuration;
+        
 
         public BookController(IConfiguration configuration)
         {
             this._configuration = configuration;
+         
         }
-
+        
         // GET: Book
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult Index(string sortOrder)
         {
+           List<BookViewModel> books = new List<BookViewModel>();
+            ///Admin admin = new Admin();
+            sortOrder = string.IsNullOrEmpty(sortOrder) ? "Title" : sortOrder;
             DataTable dataTable = new DataTable();
-            using (SqlConnection sqlConnection = new SqlConnection(_configuration.GetConnectionString("DevConnection")))
-            {
-                sqlConnection.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("BookViewAll", sqlConnection);
-                sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
-                sqlDa.Fill(dataTable);
+                using (SqlConnection sqlConnection = new SqlConnection(_configuration.GetConnectionString("DevConnection")))
+                {
+                    sqlConnection.Open();
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("BookViewAll", sqlConnection);
+                    sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    sqlDa.Fill(dataTable);
 
+                }
+            for (int i = 0; i < dataTable.Rows.Count; i++)
+            {
+
+
+                books.Add(new BookViewModel
+                {   BookID = Convert.ToInt32(dataTable.Rows[i]["BookID"].ToString()),
+                    Title = dataTable.Rows[i]["Title"].ToString(),
+                    Author = dataTable.Rows[i]["Author"].ToString(),
+                    Price =Convert.ToInt32(dataTable.Rows[i]["Price"].ToString())
+                });
             }
-            return View(dataTable);
+            var _books = books.AsQueryable();
+            switch (sortOrder)
+            {
+                case "Title":
+                    _books = _books.OrderByDescending(b => b.Title);
+                    break;
+                case "Author":
+                    _books = _books.OrderByDescending(b => b.Author);
+                    break;
+                case "Price":
+                    _books = _books.OrderByDescending(b => b.Price);
+                    break;
+                   
+            }
+
+                return View(_books);
+
+
+           
         }
 
        
@@ -35,9 +72,24 @@ namespace BooksLibrary.Controllers
         public IActionResult AddOrEdit(int? id)
         {
            BookViewModel bookViewModel = new BookViewModel();  
+            List<BookType> bookT = new List<BookType>();
+            
+            //var categoryList = bookT.ToList();
+            //SelectList l1 = new SelectList(categoryList, "BookTypeID", "BookTypeName");
+            //ViewBag.Category = l1;
+            
+
             if (id > 0)
             {
+                
                 bookViewModel = FetchBookByID(id);
+                bookT = GetBooksType();
+                bookViewModel.Categories = bookT;
+            }
+            else
+            {
+                bookT = GetBooksType();
+                bookViewModel.Categories = bookT;
             }
             return View(bookViewModel);
         }
@@ -47,8 +99,8 @@ namespace BooksLibrary.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult AddOrEdit(int id, [Bind("BookID,Title,Author,Price")] BookViewModel bookViewModel)
-        {
+        public IActionResult AddOrEdit(int id, [Bind("BookID,Title,Author,Price,Category")] BookViewModel bookViewModel)
+        { 
             if (ModelState.IsValid)
             {
                 using (SqlConnection sqlConnection = new SqlConnection(_configuration.GetConnectionString("DevConnection")))
@@ -60,12 +112,16 @@ namespace BooksLibrary.Controllers
                     sqlCmd.Parameters.AddWithValue("Title", bookViewModel.Title);
                     sqlCmd.Parameters.AddWithValue("Author", bookViewModel.Author);
                     sqlCmd.Parameters.AddWithValue("Price", bookViewModel.Price);
+                    sqlCmd.Parameters.AddWithValue("Category",bookViewModel.Category);
                     sqlCmd.ExecuteNonQuery();
 
 
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("BooksByType","Home");
             }
+            List<BookType> bookT = new List<BookType>();
+            bookT = GetBooksType();
+            bookViewModel.Categories = bookT;
             return View(bookViewModel);
         }
 
@@ -93,7 +149,7 @@ namespace BooksLibrary.Controllers
 
 
             }
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("BooksByType", "Home");
         }
 
         public BookViewModel FetchBookByID (int? id) 
@@ -114,11 +170,37 @@ namespace BooksLibrary.Controllers
                     bookViewModel.Title = dataTable.Rows[0]["Title"].ToString();
                     bookViewModel.Author = dataTable.Rows[0]["Author"].ToString();
                     bookViewModel.Price = Convert.ToInt32(dataTable.Rows[0]["Price"].ToString());
+                    bookViewModel.Category = dataTable.Rows[0]["Category"].ToString();
                 }
                 return bookViewModel;
 
             }
 
+        }
+
+        public List<BookType> GetBooksType()
+        {
+            List<BookType> bookType = new List<BookType>();
+            DataTable dataTable = new DataTable();
+            using (SqlConnection sqlConnection = new SqlConnection(_configuration.GetConnectionString("DevConnection")))
+            {
+                sqlConnection.Open();
+                SqlDataAdapter sqlDa = new SqlDataAdapter("GetBookTypeForAddOrEdit", sqlConnection);
+                sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
+                sqlDa.Fill(dataTable);
+
+            }
+            for (int i = 0; i< dataTable.Rows.Count; i++)
+            {
+               
+
+                bookType.Add(new BookType
+                {
+                    BookTypeID = Convert.ToInt32(dataTable.Rows[i]["BooksTypeID"].ToString()),
+                    BookTypeName= dataTable.Rows[i]["BooksTypeName"].ToString()
+            });
+            }
+            return bookType;
         }
 
        

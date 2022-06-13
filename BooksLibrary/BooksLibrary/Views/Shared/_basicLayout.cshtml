@@ -1,0 +1,113 @@
+﻿@using Microsoft.AspNetCore.Http
+<head>
+    <title>@ViewBag.MyTitle</title>
+    <style>
+ .logoutLblPos{
+
+   position:fixed;
+   right:10px;
+   top:5px;
+   color:white;
+   font:bold
+}
+.logoutLblPos1{
+
+   position:relative;
+    right:10px;
+   top:9px;
+   
+}
+ </style>
+</head>
+
+<header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+
+                    @if (User.Identity.Name is null)
+                    {
+                        <li class="nav-item dropdown px-3">
+                            @* <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"  role="button" data-toggle="button"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="bi bi-gear"></i> Here As
+                        </a>*@
+                         <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
+      Here As
+    </button>
+                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                           <a class="dropdown-item" asp-controller="Home" asp-action="Index" asp-route-user="admin">Library Admin</a>
+                            <a class="dropdown-item" asp-controller="Home" asp-action="Index" asp-route-user="ruser">Registered User</a>
+                       </div>
+                    </li>}
+
+                     @if (User.Identity.IsAuthenticated)
+            {
+                if (User.IsInRole("validUser"))
+        {
+                    <li class="navbar-nav flex-grow-1">
+                        <input type="button"
+         value="Create an account"
+         onclick="location.href='@Url.Action("Register", "Authentication")'" />
+                    </li>}}
+
+                    
+                       
+                    </ul>
+
+                     @if (User.Identity.IsAuthenticated)
+            {
+                if (User.IsInRole("validUser"))
+                    {
+                        <button type="button" onclick="location.href='@Url.Action("Checkout", "User")'"><span><img src="/Images/cart.png" /></span></button>
+                    }
+
+                }
+                @if (User.Identity.Name != null)
+                        {
+                            <ul class="topnav-right" style="list-style: none;">
+                                 <li class="nav-item dropdown">
+                             <button type="button"  class="btn dropdown-toggle" data-bs-toggle="dropdown">
+      Hello @User.Identity.Name
+    </button>
+                       <div class="dropdown-menu" >
+                           <a class="dropdown-item" asp-controller="Authentication" asp-action="LogOut" >LogOut</a>
+                            </div>
+                           </li>
+                        </ul>
+
+                             
+                        }
+                      
+
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+   
+
+
+<body>
+ @*   @if(User.Identity.Name != null)
+    {
+         <form align="right" name="form1"  >
+  <label class="logoutLblPos">
+        <h5>Hello @User.Identity.Name</h5>
+        @Html.ActionLink("LogOut", "LogOut", "Authentication")
+        </label>
+</form>
+    }*@
+    
+
+<img src="/Images/books.jpg"  width="1600" height="170" style="border:5px solid black"/>
+    @RenderBody()
+    @RenderSection("Scripts", required: false)
+</body>

@@ -9,6 +9,12 @@ namespace BooksLibrary.Data
         {
         }
 
-        public DbSet<BooksLibrary.Models.BookViewModel>? BookViewModel { get; set; }
+        public DbSet<BooksLibrary.Models.BookViewModel> BookViewModel { get; set; }
+        public DbSet<BooksLibrary.Models.BookType> BookType { get; set; }
+
+        public DbSet<BooksLibrary.Models.Admin> Admin { get; set; }
+
+        public DbSet<BooksLibrary.Models.Admin> Users { get; set; }
+
     }
 }

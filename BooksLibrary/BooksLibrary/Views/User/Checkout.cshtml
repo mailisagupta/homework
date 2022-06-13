@@ -1,0 +1,96 @@
+﻿@model IEnumerable<BooksLibrary.Models.ShoppingCart>
+@{
+    Layout = "_basicLayout";
+}
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Browse</title>
+     <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" ></script> 
+</head>
+
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+
+
+
+
+<h1>Cart</h1>
+@if (Model != null)
+{
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.qty)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem  => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem  => item.Author)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem  => item.qty)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem  => item.Price)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "AddToCart", new { id=item.BookId }) |
+                    @Html.ActionLink("Delete", "Checkout", new { bookid=item.BookId })
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+<div>
+      <label class="text-success">@ViewBag.result</label> 
+      @*field-validation-error*@
+      
+  </div>
+
+<form asp-action="BooksByType" asp-controller="Home">
+       
+        <input type="submit" value="Continue Shopping" class="btn btn-Success" /> 
+       
+       
+    </form>
+
+
+@if (Model != null)
+{
+    <form asp-action="Checkout" >
+       
+        <input type="submit" value="Checkout" class="btn btn-Success" /> 
+       
+       
+    </form> }
+
+
+    <div>
+    <a asp-action="BooksByType" asp-controller="Home">Back</a>
+</div> 
+

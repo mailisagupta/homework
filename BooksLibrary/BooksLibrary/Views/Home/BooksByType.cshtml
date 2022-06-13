@@ -1,0 +1,215 @@
+﻿@*
+@model System.Data.DataTable
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    
+     <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" ></script> 
+</head>
+    <img src="/Images/books.jpg"  width="1600" height="100" style="border:5px solid black">
+
+
+
+@{
+    ViewData["Title"] = "List Of Books";
+}
+<div class="text-center">
+<h1 class="display-4">@ViewData["Title"]</h1>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                Book Title
+            </th>
+            <th>
+                Book Author
+            </th>
+            <th>
+               Book Price
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+@for (int i = 0 ; i < Model.Rows.Count;i++) {
+        <tr>
+            <td>
+                @Model.Rows[i]["Title"]
+            </td>
+            <td>
+                @Model.Rows[i]["Author"]
+            </td>
+            <td>
+                @Model.Rows[i]["Price"]
+            </td>
+            
+        </tr>
+}
+    </tbody>
+</table>
+</div>
+*@
+
+
+
+@model IEnumerable<BooksLibrary.Models.BookViewModel>
+@{
+    Layout = "_basicLayout";
+}
+<head>
+ <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" >
+  </script> 
+ <script type="text/javascript" src="/js/header.js" ></script> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+ </head>
+@{
+    ViewData["Title"] = "List Of Books";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@using (Html.BeginForm("BooksByType", "Home", FormMethod.Get))
+{
+    <p>
+     Search: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+       @* <input type="text" name="SearchString" />*@
+        <input type="submit" value="Filter" /></p>
+}
+
+   
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+           @* <th>
+                book title
+            </th>
+            <th>
+                book author
+            </th>
+            <th>
+               book price
+            </th>*@
+
+           
+             <th>
+                
+                @Html.ActionLink("Book Title", "BooksByType", "Home", new { sortOrder = ViewBag.TitleSortParm,CurrentFilter=ViewBag.CurrentFilter })
+            </th>
+            <th>
+                @Html.ActionLink("Book Author", "BooksByType", "Home", new { sortOrder = ViewBag.AuthorSortParm,CurrentFilter=ViewBag.CurrentFilter })
+                
+            </th>
+            <th>
+                @Html.ActionLink("Book Price", "BooksByType", "Home", new { sortOrder = ViewBag.PriceSortParm,CurrentFilter=ViewBag.CurrentFilter })
+               
+            </th>
+            
+            @if (User.Identity.IsAuthenticated)
+            {
+                if (User.IsInRole("member"))
+        { <th>
+               
+                    @*<a asp-action="AddOrEdit">Create New</a>*@
+                    @Html.ActionLink("Create New", "AddOrEdit", "Book", null, null)
+            
+            </th>
+           }
+            }
+            @if (User.Identity.IsAuthenticated)
+            {
+                if (User.IsInRole("validUser"))
+        {
+            <th>
+
+            </th>}}
+             
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model) {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            
+           
+                 @if (User.Identity.IsAuthenticated)
+                {
+                     if (User.IsInRole("member"))
+        {  <td>
+                <a href=@Url.Action("AddOrEdit","Book",new {id = item.BookID}) >Edit</a> |
+                <a href= @Url.Action("Delete","Book",new {id = item.BookID}) >Delete</a> 
+              
+           </td> }} 
+           @if (User.Identity.IsAuthenticated)
+                {
+                    if (User.IsInRole("validUser"))
+                    {
+                        <td>
+                            <a class="btn btn-success btn-sm" href=@Url.Action("AddToCart","User",new {id = item.BookID}) ><i style="font-size:24px" class="fa">&#xf07a;</i>AddToCart</a> 
+                           
+                        </td>
+                    }
+                }
+            </tr>}
+
+
+@*@for (int i = 0 ; i < Model.Rows.Count;i++) {
+        <tr>
+            <td>
+                @Model.Rows[i]["Title"]
+            </td>
+            <td>
+                @Model.Rows[i]["Author"]
+            </td>
+            <td>
+                @Model.Rows[i]["Price"]
+            </td>
+             @if (User.Identity.IsAuthenticated)
+                {
+                     if (User.IsInRole("member"))
+        {
+                    <td>
+                        <a href=@Url.Action("AddOrEdit","Book",new {id = @Model.Rows[i]["BookID"]}) >Edit</a> |
+                <a href= @Url.Action("Delete","Book",new {id = @Model.Rows[i]["BookID"]}) >Delete</a>*@
+
+                @* @Html.ActionLink("Edit", "AddOrEdit", "Book", null, @Model.Rows[i]["BookID"])
+                 <p>|</p>
+                   @Html.ActionLink("Delete", "Delete", "Book", null, @Model.Rows[i]["BookID"])*@
+                @*  <a asp-action="AddOrEdit" asp-route-id="@Model.Rows[i]["BookID"]">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@Model.Rows[i]["BookID"]">Delete</a>*@
+@*</td>
+            }
+                }
+        </tr>
+}*@
+    </tbody>
+</table>
+@if (!User.Identity.IsAuthenticated)
+{
+    <p><strong>In order to Rent or Buy a book <a href= @Url.Action("LoginUser","Authentication") >click here</a> to login</strong></p>
+}
+<div>
+    <a asp-action="Browse">Back to List</a>
+</div>

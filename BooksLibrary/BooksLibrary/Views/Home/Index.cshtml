@@ -1,12 +1,15 @@
-﻿@{
-    Layout = null;
+﻿@using BooksLibrary;
+@{
+    Layout = "_basicLayout";
 }
 <head>
  <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
-  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" ></script> 
+  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" >
+  </script> 
  <script type="text/javascript" src="/js/header.js" ></script> 
+ 
  </head>
-  <div id="x"></div>
+  
  @* <script>
 
     var img = document.createElement("img");
@@ -19,9 +22,9 @@
 
     </script>*@
 
-@*    <img src="/Images/books.jpg"  width="1600" height="100" style="border:5px solid black">*@
+  
 
-  <div class="dropdown">
+ @*<div class="dropdown">
     <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
       Here As
     </button>
@@ -31,10 +34,24 @@
       <li>@Html.ActionLink("Registered User", "Index", "Home" , new { user = "ruser" } )</li>
     </ul>
   </div>
-
+*@
  
+
+<br />
+<br />
+<br />
+
 <div class="text-center">
     <h1 class="display-4">Welcome to the World's largest Book Library</h1>
-    @Html.ActionLink("Click here to Browse the Books", "Browse", "Home")
+  @Html.ActionLink("Click here to Browse the Books", "Browse", "Home")
+   @* <a id="BookType">Click here to Browse the Books</a>*@
       
 </div>
+
+@*<div class="BookType1"></div>
+
+<script type="text/javascript">
+    $('#booktype').click(function(){
+        $(".BookType1").load("/Home/")
+   })
+</script>*@

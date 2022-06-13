@@ -1,0 +1,40 @@
+﻿
+@model Admin
+
+@{
+    Layout = "_basicLayout";
+}
+<head>
+ <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" ></script> 
+ <script type="text/javascript" src="/js/header.js" ></script> 
+ </head>
+
+<img src="/Images/books.jpg"  width="1600" height="100" style="border:5px solid black">
+
+<form  asp-action="Admin">
+  
+
+  <div class="container">
+    <label for="AdminUserName"><b>Username</b></label>
+    <br />
+    <input type="text" placeholder="Enter Username" name="AdminUserName" required>
+    <br />
+    <label for="AdminPassword"><b>Password</b></label>
+    <br />
+    <input type="password" placeholder="Enter Password" name="AdminPassword" required>
+      <br />
+      <div>
+      <label class="field-validation-error">@Html.DisplayFor(model => model.LoginErrorMessage)</label>
+  </div>
+    <br />
+    <button type="submit">Login</button>
+      <br />
+    
+  </div>
+ 
+  
+</form>
+
+ 
+   

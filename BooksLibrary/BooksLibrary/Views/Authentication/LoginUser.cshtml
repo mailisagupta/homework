@@ -1,0 +1,50 @@
+﻿
+@model Users
+
+@{
+    Layout = "_basicLayout";
+}
+<head>
+ <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" ></script> 
+ <script type="text/javascript" src="/js/header.js" ></script> 
+ </head>
+
+
+
+<form  asp-action="LoginUser">
+  
+
+  <div class="container">
+    <label for="AdminUserName"><b>Username</b></label>
+    <br />
+    <input type="text" placeholder="Enter Username" name="UserName" required>
+    <br />
+    <label for="AdminPassword"><b>Password</b></label>
+    <br />
+    <input type="password" placeholder="Enter Password" name="UserPassword" required>
+      <br />
+      <div>
+      <label class="text-danger">@Html.DisplayFor(model => model.UserLoginErrorMessage)</label> 
+      @*field-validation-error*@
+      
+  </div>
+    <br />
+    <button type="submit">Login</button>
+      <br />
+
+      <div>
+    <a asp-action="Register">Register</a> if you don't have an account.
+</div>
+    
+  </div>
+ 
+  
+</form>
+
+<div>
+    <a asp-action="Index" asp-controller="Home">Back</a>
+</div> 
+
+ 
+   

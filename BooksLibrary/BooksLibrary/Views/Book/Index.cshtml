@@ -1,5 +1,19 @@
 ﻿
-@model System.Data.DataTable
+@*@model System.Data.DataTable*@
+
+@model IEnumerable<BooksLibrary.Models.BookViewModel>
+@{
+    Layout = "_basicLayout";
+}
+
+<head>
+ <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+  <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" >
+  </script> 
+ <script type="text/javascript" src="/js/header.js" ></script> 
+ 
+ </head>
+
 @{
     ViewData["Title"] = "List Of Books";
 }
@@ -11,21 +25,25 @@
     <thead>
         <tr>
             <th>
-                Book Title
+                
+                @Html.ActionLink("Book Title", "Index", "Book", new { sortOrder = "Title" })
             </th>
             <th>
-                Book Author
+                @Html.ActionLink("Book Author", "Index", "Book", new { sortOrder = "Author" })
+                
             </th>
             <th>
-               Book Price
+                @Html.ActionLink("Book Price", "Index", "Book", new { sortOrder = "Price" })
+               
             </th>
             <th>
                  <a asp-action="AddOrEdit">Create New</a>
+
             </th>
         </tr>
     </thead>
     <tbody>
-@for (int i = 0 ; i < Model.Rows.Count;i++) {
+@*@for (int i = 0 ; i < Model.Rows.Count;i++) {
         <tr>
             <td>
                 @Model.Rows[i]["Title"]
@@ -41,6 +59,28 @@
                 <a asp-action="Delete" asp-route-id="@Model.Rows[i]["BookID"]">Delete</a>
             </td>
         </tr>
-}
+}*@
+
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            
+            <td>
+                <a href=@Url.Action("AddOrEdit","Book",new {id = item.BookID}) >Edit</a> |
+                <a href= @Url.Action("Delete","Book",new {id = item.BookID}) >Delete</a>
+              
+            </td>
+        </tr>}
     </tbody>
 </table>
+
+
+<a href= @Url.Action("Browse","Home") >Back to List</a>
