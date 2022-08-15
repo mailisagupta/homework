@@ -47,15 +47,14 @@
                        </div>
                     </li>}
 
-                     @if (User.Identity.IsAuthenticated)
+                     @if (!User.Identity.IsAuthenticated)
             {
-                if (User.IsInRole("validUser"))
-        {
+               
                     <li class="navbar-nav flex-grow-1">
                         <input type="button"
          value="Create an account"
          onclick="location.href='@Url.Action("Register", "Authentication")'" />
-                    </li>}}
+                    </li>}
 
                     
                        

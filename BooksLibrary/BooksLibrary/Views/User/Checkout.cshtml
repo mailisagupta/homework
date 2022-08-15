@@ -19,7 +19,7 @@
 
 
 <h1>Cart</h1>
-@if (Model != null)
+@if (@Model.Count() != 0)
 {
 
     <table class="table">
@@ -80,7 +80,7 @@
     </form>
 
 
-@if (Model != null)
+@if (@Model.Count() != 0)
 {
     <form asp-action="Checkout" >
        

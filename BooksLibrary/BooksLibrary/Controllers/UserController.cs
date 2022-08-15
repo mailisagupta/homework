@@ -64,8 +64,10 @@ namespace BooksLibrary.Controllers
             carts = GetCarts();
             if (bookid == 0 && carts.Count != 0)
             {
-                ViewBag.result = "Order Placed successfully!";
                 RemoveCart();
+                carts = GetCarts();
+                ViewBag.result = "Order Placed successfully!";
+                
             }
 
             else if (bookid != 0 && carts.Count != 0)

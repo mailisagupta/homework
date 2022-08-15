@@ -1,0 +1,46 @@
+<app-header (featureSelected)="onNavigate($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <input type="text" [(ngModel)]="name" />
+      <p>{{name}}</p>
+
+
+      <app-SuccessAlert></app-SuccessAlert>
+      <app-WarningAlert></app-WarningAlert>
+      <label>Username</label>
+      <input type="text" class="form-control" [(ngModel)]="UserName" />
+      <p>{{UserName}}</p>
+      <button class="btn btn-primary" [disabled]="disableButton()" (click)="OnButtonClick()">ResetUser</button>
+      <button class="btn btn-primary" (click)="OnDisplayButton()">Display Details</button>
+      <p *ngIf="DisplayButton">Secret Password=tuna</p>
+      <!--<div *ngFor="let logitem of log"-->
+      <!--[ngStyle]="{backgroundColor: logitem>=5 ? 'blue' :'transparent'}"
+      [ngClass]="{'white-text': logitem>=5}"-->
+      <div *ngFor="let logitem of log; let i =index" [ngStyle]="{backgroundColor: i>=4 ? 'blue' :'transparent'}"
+           [ngClass]="{'white-text': i>=4}">{{logitem}}</div>
+      <app-recipes *ngIf="loadedFeature==='recipe'"></app-recipes>
+      <app-shopping-list *ngIf="loadedFeature!=='recipe'"></app-shopping-list>
+    </div>
+  </div>
+</div>
+<hr />
+<ng-template #templateref>
+  <div>Your template content</div>
+</ng-template>
+
+
+<div class="row">
+  <div class="col-xs-12">
+    <app-game-contol (intervalFired)="onIntervalFired($event)"></app-game-contol>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <app-odd *ngFor="let oddnumber of oddNumber" [number]="oddnumber"></app-odd>
+    <app-even *ngFor="let evennumber of evenNumber" [number]="evennumber"></app-even>
+  </div>
+</div>
+
+
+

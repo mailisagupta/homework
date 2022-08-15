@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserServiceWebApi", "UserServiceWebApi\UserServiceWebApi.csproj", "{676D5918-3217-4603-9F7D-DA7F45AB949E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserDataAccess", "UserDataAccess\UserDataAccess.csproj", "{EFDB8093-FBDE-4E4E-B1F1-BC99BAF3A81E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{676D5918-3217-4603-9F7D-DA7F45AB949E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{676D5918-3217-4603-9F7D-DA7F45AB949E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{676D5918-3217-4603-9F7D-DA7F45AB949E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{676D5918-3217-4603-9F7D-DA7F45AB949E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFDB8093-FBDE-4E4E-B1F1-BC99BAF3A81E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFDB8093-FBDE-4E4E-B1F1-BC99BAF3A81E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFDB8093-FBDE-4E4E-B1F1-BC99BAF3A81E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFDB8093-FBDE-4E4E-B1F1-BC99BAF3A81E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5378C450-C8C7-483A-8E27-15445CE38EFB}
+	EndGlobalSection
+EndGlobal
