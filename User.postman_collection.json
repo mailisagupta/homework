@@ -1,0 +1,371 @@
+{
+	"info": {
+		"_postman_id": "a3a53fbc-6fc5-4117-80c6-d86ebb973b99",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21980851"
+	},
+	"item": [
+		{
+			"name": "GetAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearer-token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{UsersService}}/api/Users",
+					"protocol": "http",
+					"host": [
+						"{{UsersService}}"
+					],
+					"path": [
+						"api",
+						"Users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSpecific",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearer-token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{UsersService}}/api/Users/13c77193-5c03-4808-8205-adc876d952ef",
+					"protocol": "http",
+					"host": [
+						"{{UsersService}}"
+					],
+					"path": [
+						"api",
+						"Users",
+						"13c77193-5c03-4808-8205-adc876d952ef"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearer-token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n  \"userEmail\": \"m@example.com\",\r\n  \"userPassword\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{UsersService}}/api/Users",
+					"protocol": "http",
+					"host": [
+						"{{UsersService}}"
+					],
+					"path": [
+						"api",
+						"Users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearer-token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n  \"userEmail\": \"user@example.com\",\r\n  \"userPassword\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{UsersService}}/api/Users/dda430bc-5cf3-46a9-aad5-7d69657d715d",
+					"protocol": "http",
+					"host": [
+						"{{UsersService}}"
+					],
+					"path": [
+						"api",
+						"Users",
+						"dda430bc-5cf3-46a9-aad5-7d69657d715d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearer-token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://{{UsersService}}/api/Users/dda430bc-5cf3-46a9-aad5-7d69657d715d",
+					"protocol": "http",
+					"host": [
+						"{{UsersService}}"
+					],
+					"path": [
+						"api",
+						"Users",
+						"dda430bc-5cf3-46a9-aad5-7d69657d715d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getToken",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var json = JSON.parse(responseBody);\r",
+							"pm.globals.set(\"bearer-token\", json.token);    "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{UsersService}}/api/Login?useremail=ravi@example.com&userpassword=ravi",
+					"protocol": "http",
+					"host": [
+						"{{UsersService}}"
+					],
+					"path": [
+						"api",
+						"Login"
+					],
+					"query": [
+						{
+							"key": "useremail",
+							"value": "ravi@example.com"
+						},
+						{
+							"key": "userpassword",
+							"value": "ravi"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostToken",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var json = JSON.parse(responseBody);\r",
+							"pm.globals.set(\"bearer-token\", json.token);    "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userEmail\": \"ravi@example.com\",\r\n  \"userPassword\": \"ravi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{UsersService}}/api/Login",
+					"protocol": "http",
+					"host": [
+						"{{UsersService}}"
+					],
+					"path": [
+						"api",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteToken",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var json = JSON.parse(responseBody);\r",
+							"pm.globals.set(\"bearer-token\", json.token);    "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://{{UsersService}}/api/Login?token={{bearer-token}}",
+					"protocol": "http",
+					"host": [
+						"{{UsersService}}"
+					],
+					"path": [
+						"api",
+						"Login"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{bearer-token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
